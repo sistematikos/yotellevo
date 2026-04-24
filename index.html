@@ -1,0 +1,52 @@
+<style>
+  :root {
+    --gris-fondo: #f8f9fa;
+    --azul-principal: #00a8cc; /* Turquesa Rey */
+    --gris-texto: #333333;
+    --blanco: #ffffff;
+  }
+
+  body {
+    background-color: var(--gris-fondo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--gris-texto);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    text-align: center;
+    padding: 40px;
+    background: var(--blanco);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  }
+
+  .btn-entrar {
+    background-color: var(--azul-principal);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-entrar:hover {
+    transform: scale(1.05);
+    background-color: #007ea7; /* Un tono un poco más oscuro para el hover */
+  }
+</style>
+
+<div class="container">
+  <h1>YoTeLlevo</h1>
+  <p>Movilidad inteligente para todos.</p>
+  <a href="TU_LINK_AQUI" class="btn-entrar">ENTRAR</a>
+</div>
