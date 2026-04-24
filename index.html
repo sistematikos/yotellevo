@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YoTeLlevo - Movilidad Profesional</title>
+    <title>YoTeLlevo - Bienvenidos</title>
     <style>
         :root {
-            /* Azules extraídos de la interfaz de la app */
-            --azul-app-intenso: #2b5bb3; /* El azul del menú lateral */
-            --azul-app-brillante: #1e88e5; /* El azul de los botones/acentos */
-            --gris-fondo: #f0f2f5;
+            /* Colores basados en tu captura de pantalla */
+            --azul-corporativo: #2b5bb3; 
+            --azul-brillante: #1e88e5;
+            --gris-fondo-app: #f4f7f9;
             --blanco: #ffffff;
-            --texto-titulo: #1a2a40;
-            --texto-cuerpo: #4e5d78;
+            --texto-oscuro: #1a2a40;
+            --texto-suave: #4e5d78;
         }
 
         * {
@@ -23,42 +23,45 @@
         }
 
         body {
-            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+            /* Degradado de grises claros para que la tarjeta blanca resalte */
+            background: linear-gradient(135deg, #e2e8f0 0%, #f4f7f9 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: var(--texto-cuerpo);
+            color: var(--texto-suave);
         }
 
         .app-card {
             background: var(--blanco);
             width: 92%;
             max-width: 480px;
-            padding: 60px 35px 45px 35px; 
-            border-radius: 25px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+            padding: 60px 40px;
+            border-radius: 30px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
             text-align: center;
-            border-top: 8px solid var(--azul-app-intenso);
+            position: relative;
+            /* Línea superior con el azul de tu menú lateral */
+            border-top: 10px solid var(--azul-corporativo);
         }
 
         .header-section {
-            margin-bottom: 40px; 
+            margin-bottom: 45px;
         }
 
         .brand-name {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             font-weight: 800;
-            color: var(--azul-app-intenso); /* Azul sólido como el logo de tu app */
-            letter-spacing: -1.5px;
+            color: var(--azul-corporativo);
+            letter-spacing: -2px;
             margin-bottom: 5px;
         }
 
         .tagline {
             font-size: 0.9rem;
-            color: var(--azul-app-brillante);
+            color: var(--azul-brillante);
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             font-weight: 700;
         }
 
@@ -68,54 +71,50 @@
         }
 
         .info-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             padding: 20px;
-            border-radius: 15px;
+            border-radius: 18px;
             background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
-        }
-
-        .info-group:hover {
-            border-color: var(--azul-app-brillante);
-            background: #f1f5f9;
+            border: 1px solid #eef2f6;
         }
 
         .info-group h2 {
             font-size: 1.1rem;
-            color: var(--azul-app-intenso);
-            margin-bottom: 8px;
+            color: var(--azul-corporativo);
+            margin-bottom: 10px;
             font-weight: 700;
         }
 
         .info-group p {
-            font-size: 0.95rem;
+            font-size: 1rem;
             line-height: 1.6;
+            color: var(--texto-suave);
         }
 
         .btn-entrar {
             display: block;
-            background: linear-gradient(180deg, var(--azul-app-brillante) 0%, var(--azul-app-intenso) 100%);
+            /* Degradado azul idéntico a los elementos visuales de tu app */
+            background: linear-gradient(180deg, var(--azul-brillante) 0%, var(--azul-corporativo) 100%);
             color: white;
             text-decoration: none;
-            padding: 20px;
-            border-radius: 12px;
-            font-size: 1.2rem;
+            padding: 22px;
+            border-radius: 15px;
+            font-size: 1.3rem;
             font-weight: 700;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(43, 91, 179, 0.3);
+            box-shadow: 0 10px 25px rgba(43, 91, 179, 0.35);
             text-transform: uppercase;
         }
 
         .btn-entrar:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(43, 91, 179, 0.5);
             filter: brightness(1.1);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(43, 91, 179, 0.4);
         }
 
         .footer-note {
-            margin-top: 30px;
-            font-size: 0.8rem;
+            margin-top: 35px;
+            font-size: 0.85rem;
             color: #94a3b8;
             font-weight: 600;
         }
@@ -132,18 +131,18 @@
         <div class="info-section">
             <div class="info-group">
                 <h2>Socios Conductores</h2>
-                <p>Optimiza tu rentabilidad con <strong>liquidez inmediata</strong>. Sé tu propio gestor con tarifas diseñadas para proteger tu esfuerzo y tu vehículo. Respaldo humano permanente.</p>
+                <p>Optimiza tu rentabilidad con <strong>liquidez inmediata</strong>. Toma el mando como gestor independiente con tarifas diseñadas para proteger tu esfuerzo y tu vehículo. Respaldo humano permanente.</p>
             </div>
 
             <div class="info-group">
                 <h2>Experiencia del Pasajero</h2>
-                <p>Tu ciudad disponible al instante. Viaja con seguridad integral, eficiencia y transparencia total en cada tarifa.</p>
+                <p>Tu ciudad disponible al instante. Viaja con estándares superiores de seguridad, eficiencia y transparencia total en cada tarifa.</p>
             </div>
         </div>
 
-        <a href="#" class="btn-entrar">Ingresar a la App</a>
+        <a href="https://tinyurl.com/YO-TE-LLEVO" class="btn-entrar">ENTRAR</a>
 
-        <p class="footer-note">Soporte Técnico 24/7 • Conexión Directa</p>
+        <p class="footer-note">Soporte Técnico 24/7 • Tecnología de Vanguardia</p>
     </div>
 
 </body>
