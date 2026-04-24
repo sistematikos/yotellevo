@@ -3,89 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YoTeLlevo - Tu App de Movilidad</title>
+    <title>YoTeLlevo - App de Movilidad</title>
     <style>
-        /* Definición de colores profesionales */
         :root {
-            --gris-fondo: #f4f7f9;
+            --gris-claro: #f8f9fa;
             --blanco: #ffffff;
             --azul-turquesa: #00ced1;
             --azul-rey: #0056b3;
-            --texto-oscuro: #2d3436;
-            --texto-suave: #636e72;
+            --texto-principal: #2d3436;
+            --texto-secundario: #636e72;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         body {
-            background-color: var(--gris-fondo);
             background: linear-gradient(135deg, #e9ecef 0%, #f4f7f9 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            color: var(--texto-principal);
         }
 
-        .app-container {
+        .app-card {
             background: var(--blanco);
-            width: 100%;
-            max-width: 420px;
-            padding: 40px 30px;
-            border-radius: 30px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 450px;
+            padding: 45px 35px;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             text-align: center;
-            border: 1px solid rgba(0,0,0,0.05);
         }
 
-        .logo-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(45deg, var(--azul-turquesa), var(--azul-rey));
-            margin: 0 auto 20px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 20px rgba(0,206,209,0.3);
-        }
-
-        .logo-icon svg {
-            width: 40px;
-            fill: white;
-        }
-
-        h1 {
-            color: var(--texto-oscuro);
-            font-size: 2rem;
+        .brand-name {
+            font-size: 2.5rem;
             font-weight: 800;
+            background: linear-gradient(45deg, var(--azul-turquesa), var(--azul-rey));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
         }
 
-        .descripcion {
-            color: var(--texto-suave);
+        .tagline {
             font-size: 1.1rem;
-            line-height: 1.5;
+            color: var(--texto-secundario);
             margin-bottom: 30px;
+            font-weight: 500;
         }
 
-        .promo-box {
-            background-color: #f8f9fa;
-            border-left: 4px solid var(--azul-turquesa);
-            padding: 15px;
+        .info-section {
             text-align: left;
-            margin-bottom: 30px;
-            border-radius: 8px;
+            margin-bottom: 35px;
         }
 
-        .promo-box p {
+        .info-group {
+            margin-bottom: 25px;
+        }
+
+        .info-group h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--azul-rey);
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--azul-turquesa);
+            display: inline-block;
+        }
+
+        .info-group p {
             font-size: 0.95rem;
-            color: var(--texto-oscuro);
-            margin-bottom: 5px;
+            line-height: 1.5;
+            color: var(--texto-principal);
         }
 
         .btn-entrar {
@@ -93,45 +86,48 @@
             background: linear-gradient(45deg, var(--azul-turquesa), var(--azul-rey));
             color: white;
             text-decoration: none;
-            padding: 18px;
-            border-radius: 15px;
+            padding: 20px;
+            border-radius: 16px;
             font-size: 1.2rem;
             font-weight: 700;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 15px rgba(0,86,179,0.2);
+            box-shadow: 0 8px 20px rgba(0,86,179,0.2);
         }
 
         .btn-entrar:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,86,179,0.3);
-            filter: brightness(1.1);
+            box-shadow: 0 12px 25px rgba(0,86,179,0.3);
+            filter: brightness(1.05);
         }
 
-        .footer-text {
+        .footer-note {
             margin-top: 25px;
-            font-size: 0.85rem;
-            color: var(--texto-suave);
+            font-size: 0.8rem;
+            color: var(--texto-secundario);
         }
     </style>
 </head>
 <body>
 
-    <div class="app-container">
-        <div class="logo-icon">
-            <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+    <div class="app-card">
+        <h1 class="brand-name">YoTeLlevo</h1>
+        <p class="tagline">Tu destino, nuestra prioridad.</p>
+
+        <div class="info-section">
+            <div class="info-group">
+                <h2>Conductores</h2>
+                <p>Ganancia disponible de inmediato. Tú mismo eres tu jefe, con precios justos para cuidar de tu esfuerzo y de tu vehículo. Atención y soporte real con nuestros operadores.</p>
+            </div>
+
+            <div class="info-group">
+                <h2>Pasajeros</h2>
+                <p>Viajes cómodos y seguros con tarifas transparentes. La mejor tecnología para conectarte con conductores verificados en tiempo real.</p>
+            </div>
         </div>
 
-        <h1>YoTeLlevo</h1>
-        <p class="descripcion">La nueva forma de moverte. Rápido, seguro y siempre a tu alcance.</p>
+        <a href="TU_LINK_AQUI" class="btn-entrar">ENTRAR</a>
 
-        <div class="promo-box">
-            <p><strong>🚗 Conductores:</strong> Comisiones bajas, libertad total.</p>
-            <p><strong>🙋‍♂️ Pasajeros:</strong> Viajes premium a precio justo.</p>
-        </div>
-
-        <a href="LINK_DE_TU_APP_AQUI" class="btn-entrar">ENTRAR</a>
-
-        <p class="footer-text">Únete a los miles de usuarios que ya viajan con nosotros.</p>
+        <p class="footer-note">Únete hoy a la red de transporte más justa.</p>
     </div>
 
 </body>
