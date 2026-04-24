@@ -34,58 +34,67 @@
             background: var(--blanco);
             width: 92%;
             max-width: 480px;
-            padding: 50px 40px;
-            border-radius: 32px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            /* Aumentamos el padding superior de 50px a 70px para dar aire */
+            padding: 70px 40px 50px 40px; 
+            border-radius: 35px;
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.2);
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.8);
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.9);
+        }
+
+        .header-section {
+            /* Espaciado extra debajo del encabezado principal */
+            margin-bottom: 50px; 
         }
 
         .brand-name {
-            font-size: 2.8rem;
+            font-size: 3rem;
             font-weight: 900;
             background: linear-gradient(45deg, var(--azul-turquesa), var(--azul-rey));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -1.5px;
-            margin-bottom: 8px;
+            letter-spacing: -2px;
+            margin-bottom: 12px;
+            display: block;
         }
 
         .tagline {
-            font-size: 1rem;
+            font-size: 0.85rem;
             color: var(--azul-rey);
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            margin-bottom: 35px;
-            opacity: 0.8;
+            letter-spacing: 4px;
+            font-weight: 800;
+            opacity: 0.7;
         }
 
         .info-section {
             text-align: left;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
         .info-group {
-            margin-bottom: 30px;
-            padding: 15px;
-            border-radius: 12px;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 18px;
             background: #f8fafc;
-            border-left: 5px solid var(--azul-turquesa);
+            border-left: 6px solid var(--azul-turquesa);
+            transition: transform 0.3s ease;
+        }
+
+        .info-group:hover {
+            transform: translateX(5px);
         }
 
         .info-group h2 {
             font-size: 1.1rem;
             color: var(--texto-titulo);
             margin-bottom: 8px;
-            display: flex;
-            align-items: center;
         }
 
         .info-group p {
             font-size: 0.95rem;
             line-height: 1.6;
-            color: var(--texto-cuerpo);
         }
 
         .btn-entrar {
@@ -94,46 +103,49 @@
             color: white;
             text-decoration: none;
             padding: 22px;
-            border-radius: 18px;
+            border-radius: 20px;
             font-size: 1.2rem;
             font-weight: 700;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 25px rgba(30, 55, 153, 0.25);
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 25px rgba(30, 55, 153, 0.3);
         }
 
         .btn-entrar:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 30px rgba(30, 55, 153, 0.35);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(30, 55, 153, 0.45);
         }
 
         .footer-note {
-            margin-top: 30px;
-            font-size: 0.85rem;
+            margin-top: 35px;
+            font-size: 0.8rem;
             color: #94a3b8;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
 
     <div class="app-card">
-        <h1 class="brand-name">YoTeLlevo</h1>
-        <p class="tagline">Evolución en Movilidad</p>
+        <div class="header-section">
+            <h1 class="brand-name">YoTeLlevo</h1>
+            <p class="tagline">Evolución en Movilidad</p>
+        </div>
 
         <div class="info-section">
             <div class="info-group">
                 <h2>Socios Conductores</h2>
-                <p>Optimiza tu economía con <strong>liquidez inmediata</strong> de tus ingresos. Toma el control total como tu propio gestor, bajo un modelo de tarifas competitivas diseñado para proteger tu esfuerzo y preservar el valor de tu vehículo. Cuentas con el respaldo directo de nuestro centro de soporte humano permanente.</p>
+                <p>Optimiza tu rentabilidad con <strong>liquidez inmediata</strong>. Toma el mando como gestor independiente con tarifas justas diseñadas para proteger tu esfuerzo y tu patrimonio vehicular. Respaldo humano garantizado.</p>
             </div>
 
             <div class="info-group">
                 <h2>Experiencia del Pasajero</h2>
-                <p>Accede a un estándar superior de transporte urbano. Conectamos tu destino con eficiencia, garantizando seguridad integral y tarifas transparentes en cada trayecto.</p>
+                <p>Tu ciudad, disponible al instante. Viaja con estándares superiores de seguridad, eficiencia y transparencia total en cada tarifa.</p>
             </div>
         </div>
 
-        <a href="#" class="btn-entrar">INGRESAR A LA PLATAFORMA</a>
+        <a href="#" class="btn-entrar">INGRESAR AHORA</a>
 
-        <p class="footer-note">Soporte técnico 24/7 • Tecnología de vanguardia</p>
+        <p class="footer-note">Soporte Técnico 24/7 • Conexión Global</p>
     </div>
 
 </body>
