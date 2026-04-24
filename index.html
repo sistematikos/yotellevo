@@ -1,17 +1,100 @@
-<div class="card-bienvenida">
-  <h1 style="color: #007BFF; font-size: 2.5rem;">¡Bienvenido a YoTeLlevo!</h1>
-  
-  <p style="font-size: 1.2rem; line-height: 1.6; color: #555;">
-    Únete a la plataforma que está revolucionando el transporte. 
-    <strong>¿Pasajero?</strong> Viaja cómodo y seguro. 
-    <strong>¿Conductor?</strong> Sé tu propio jefe y gana más.
-  </p>
+<style>
+  :root {
+    --gris-fondo: #f0f2f5;
+    --azul-turquesa: #00ced1;
+    --azul-rey: #0056b3;
+    --blanco: #ffffff;
+    --texto: #2d3436;
+  }
 
-  <div class="cta-container" style="margin-top: 30px;">
-     <a href="TU_LINK" class="btn-entrar">EMPEZAR MI VIAJE</a>
-  </div>
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: linear-gradient(135deg, #f0f2f5 0%, #e0e6ed 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--texto);
+  }
 
-  <p style="margin-top: 20px; font-size: 0.9rem; color: #888;">
-    Seguridad y confianza en cada kilómetro.
-  </p>
-</div>
+  .app-card {
+    background: var(--blanco);
+    width: 90%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .logo-placeholder {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--azul-turquesa), var(--azul-rey));
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    box-shadow: 0 10px 20px rgba(0,206,209,0.3);
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+    color: #1a1a1a;
+  }
+
+  .tagline {
+    color: #636e72;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  .benefits {
+    text-align: left;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+
+  .benefit-item:before {
+    content: "✓";
+    color: var(--azul-turquesa);
+    margin-right: 10px;
+    font-weight: bold;
+  }
+
+  .btn-primary {
+    display: block;
+    background: linear-gradient(45deg, var(--azul-turquesa), var(--azul-rey));
+    color: white;
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0,86,179,0.2);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(0,86,179,0.3);
+  }
+</style>
