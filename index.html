@@ -6,23 +6,24 @@
     <title>YoTeLlevo - Movilidad Profesional</title>
     <style>
         :root {
-            --gris-fondo: #f0f4f8;
+            /* Azules extraídos de la interfaz de la app */
+            --azul-app-intenso: #2b5bb3; /* El azul del menú lateral */
+            --azul-app-brillante: #1e88e5; /* El azul de los botones/acentos */
+            --gris-fondo: #f0f2f5;
             --blanco: #ffffff;
-            --azul-turquesa: #00ced1;
-            --azul-rey: #1e3799;
-            --texto-titulo: #1a1a1a;
-            --texto-cuerpo: #4a5568;
+            --texto-titulo: #1a2a40;
+            --texto-cuerpo: #4e5d78;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -34,62 +35,57 @@
             background: var(--blanco);
             width: 92%;
             max-width: 480px;
-            /* Aumentamos el padding superior de 50px a 70px para dar aire */
-            padding: 70px 40px 50px 40px; 
-            border-radius: 35px;
-            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.2);
+            padding: 60px 35px 45px 35px; 
+            border-radius: 25px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
             text-align: center;
-            position: relative;
-            border: 1px solid rgba(255,255,255,0.9);
+            border-top: 8px solid var(--azul-app-intenso);
         }
 
         .header-section {
-            /* Espaciado extra debajo del encabezado principal */
-            margin-bottom: 50px; 
+            margin-bottom: 40px; 
         }
 
         .brand-name {
-            font-size: 3rem;
-            font-weight: 900;
-            background: linear-gradient(45deg, var(--azul-turquesa), var(--azul-rey));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -2px;
-            margin-bottom: 12px;
-            display: block;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--azul-app-intenso); /* Azul sólido como el logo de tu app */
+            letter-spacing: -1.5px;
+            margin-bottom: 5px;
         }
 
         .tagline {
-            font-size: 0.85rem;
-            color: var(--azul-rey);
+            font-size: 0.9rem;
+            color: var(--azul-app-brillante);
             text-transform: uppercase;
-            letter-spacing: 4px;
-            font-weight: 800;
-            opacity: 0.7;
+            letter-spacing: 3px;
+            font-weight: 700;
         }
 
         .info-section {
             text-align: left;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
         .info-group {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             padding: 20px;
-            border-radius: 18px;
+            border-radius: 15px;
             background: #f8fafc;
-            border-left: 6px solid var(--azul-turquesa);
-            transition: transform 0.3s ease;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
         }
 
         .info-group:hover {
-            transform: translateX(5px);
+            border-color: var(--azul-app-brillante);
+            background: #f1f5f9;
         }
 
         .info-group h2 {
             font-size: 1.1rem;
-            color: var(--texto-titulo);
+            color: var(--azul-app-intenso);
             margin-bottom: 8px;
+            font-weight: 700;
         }
 
         .info-group p {
@@ -99,27 +95,29 @@
 
         .btn-entrar {
             display: block;
-            background: linear-gradient(45deg, var(--azul-turquesa), var(--azul-rey));
+            background: linear-gradient(180deg, var(--azul-app-brillante) 0%, var(--azul-app-intenso) 100%);
             color: white;
             text-decoration: none;
-            padding: 22px;
-            border-radius: 20px;
+            padding: 20px;
+            border-radius: 12px;
             font-size: 1.2rem;
             font-weight: 700;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 25px rgba(30, 55, 153, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(43, 91, 179, 0.3);
+            text-transform: uppercase;
         }
 
         .btn-entrar:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(30, 55, 153, 0.45);
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(43, 91, 179, 0.4);
         }
 
         .footer-note {
-            margin-top: 35px;
+            margin-top: 30px;
             font-size: 0.8rem;
             color: #94a3b8;
-            font-weight: 500;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -128,24 +126,24 @@
     <div class="app-card">
         <div class="header-section">
             <h1 class="brand-name">YoTeLlevo</h1>
-            <p class="tagline">Evolución en Movilidad</p>
+            <p class="tagline">Más viajes, más ingresos</p>
         </div>
 
         <div class="info-section">
             <div class="info-group">
                 <h2>Socios Conductores</h2>
-                <p>Optimiza tu rentabilidad con <strong>liquidez inmediata</strong>. Toma el mando como gestor independiente con tarifas justas diseñadas para proteger tu esfuerzo y tu patrimonio vehicular. Respaldo humano garantizado.</p>
+                <p>Optimiza tu rentabilidad con <strong>liquidez inmediata</strong>. Sé tu propio gestor con tarifas diseñadas para proteger tu esfuerzo y tu vehículo. Respaldo humano permanente.</p>
             </div>
 
             <div class="info-group">
                 <h2>Experiencia del Pasajero</h2>
-                <p>Tu ciudad, disponible al instante. Viaja con estándares superiores de seguridad, eficiencia y transparencia total en cada tarifa.</p>
+                <p>Tu ciudad disponible al instante. Viaja con seguridad integral, eficiencia y transparencia total en cada tarifa.</p>
             </div>
         </div>
 
-        <a href="#" class="btn-entrar">INGRESAR AHORA</a>
+        <a href="#" class="btn-entrar">Ingresar a la App</a>
 
-        <p class="footer-note">Soporte Técnico 24/7 • Conexión Global</p>
+        <p class="footer-note">Soporte Técnico 24/7 • Conexión Directa</p>
     </div>
 
 </body>
