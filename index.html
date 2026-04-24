@@ -3,82 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YoTeLlevo - App de Movilidad</title>
+    <title>YoTeLlevo - Movilidad Profesional</title>
     <style>
         :root {
-            --gris-claro: #f8f9fa;
+            --gris-fondo: #f0f4f8;
             --blanco: #ffffff;
             --azul-turquesa: #00ced1;
-            --azul-rey: #0056b3;
-            --texto-principal: #2d3436;
-            --texto-secundario: #636e72;
+            --azul-rey: #1e3799;
+            --texto-titulo: #1a1a1a;
+            --texto-cuerpo: #4a5568;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #e9ecef 0%, #f4f7f9 100%);
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: var(--texto-principal);
+            color: var(--texto-cuerpo);
         }
 
         .app-card {
             background: var(--blanco);
-            width: 90%;
-            max-width: 450px;
-            padding: 45px 35px;
-            border-radius: 28px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            width: 92%;
+            max-width: 480px;
+            padding: 50px 40px;
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
             text-align: center;
+            border: 1px solid rgba(255,255,255,0.8);
         }
 
         .brand-name {
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-size: 2.8rem;
+            font-weight: 900;
             background: linear-gradient(45deg, var(--azul-turquesa), var(--azul-rey));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
+            letter-spacing: -1.5px;
+            margin-bottom: 8px;
         }
 
         .tagline {
-            font-size: 1.1rem;
-            color: var(--texto-secundario);
-            margin-bottom: 30px;
-            font-weight: 500;
+            font-size: 1rem;
+            color: var(--azul-rey);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 35px;
+            opacity: 0.8;
         }
 
         .info-section {
             text-align: left;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
 
         .info-group {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 12px;
+            background: #f8fafc;
+            border-left: 5px solid var(--azul-turquesa);
         }
 
         .info-group h2 {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--azul-rey);
-            margin-bottom: 10px;
-            border-bottom: 2px solid var(--azul-turquesa);
-            display: inline-block;
+            font-size: 1.1rem;
+            color: var(--texto-titulo);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
         }
 
         .info-group p {
             font-size: 0.95rem;
-            line-height: 1.5;
-            color: var(--texto-principal);
+            line-height: 1.6;
+            color: var(--texto-cuerpo);
         }
 
         .btn-entrar {
@@ -86,24 +93,23 @@
             background: linear-gradient(45deg, var(--azul-turquesa), var(--azul-rey));
             color: white;
             text-decoration: none;
-            padding: 20px;
-            border-radius: 16px;
+            padding: 22px;
+            border-radius: 18px;
             font-size: 1.2rem;
             font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0,86,179,0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(30, 55, 153, 0.25);
         }
 
         .btn-entrar:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(0,86,179,0.3);
-            filter: brightness(1.05);
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(30, 55, 153, 0.35);
         }
 
         .footer-note {
-            margin-top: 25px;
-            font-size: 0.8rem;
-            color: var(--texto-secundario);
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #94a3b8;
         }
     </style>
 </head>
@@ -111,23 +117,23 @@
 
     <div class="app-card">
         <h1 class="brand-name">YoTeLlevo</h1>
-        <p class="tagline">Tu destino, nuestra prioridad.</p>
+        <p class="tagline">Evolución en Movilidad</p>
 
         <div class="info-section">
             <div class="info-group">
-                <h2>Conductores</h2>
-                <p>Ganancia disponible de inmediato. Tú mismo eres tu jefe, con precios justos para cuidar de tu esfuerzo y de tu vehículo. Atención y soporte real con nuestros operadores.</p>
+                <h2>Socios Conductores</h2>
+                <p>Optimiza tu economía con <strong>liquidez inmediata</strong> de tus ingresos. Toma el control total como tu propio gestor, bajo un modelo de tarifas competitivas diseñado para proteger tu esfuerzo y preservar el valor de tu vehículo. Cuentas con el respaldo directo de nuestro centro de soporte humano permanente.</p>
             </div>
 
             <div class="info-group">
-                <h2>Pasajeros</h2>
-                <p>Viajes cómodos y seguros con tarifas transparentes. La mejor tecnología para conectarte con conductores verificados en tiempo real.</p>
+                <h2>Experiencia del Pasajero</h2>
+                <p>Accede a un estándar superior de transporte urbano. Conectamos tu destino con eficiencia, garantizando seguridad integral y tarifas transparentes en cada trayecto.</p>
             </div>
         </div>
 
-        <a href="TU_LINK_AQUI" class="btn-entrar">ENTRAR</a>
+        <a href="#" class="btn-entrar">INGRESAR A LA PLATAFORMA</a>
 
-        <p class="footer-note">Únete hoy a la red de transporte más justa.</p>
+        <p class="footer-note">Soporte técnico 24/7 • Tecnología de vanguardia</p>
     </div>
 
 </body>
