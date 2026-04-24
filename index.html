@@ -6,7 +6,6 @@
     <title>YoTeLlevo - Bienvenidos</title>
     <style>
         :root {
-            /* Colores basados en tu captura de pantalla */
             --azul-corporativo: #2b5bb3; 
             --azul-brillante: #1e88e5;
             --gris-fondo-app: #f4f7f9;
@@ -23,100 +22,107 @@
         }
 
         body {
-            /* Degradado de grises claros para que la tarjeta blanca resalte */
             background: linear-gradient(135deg, #e2e8f0 0%, #f4f7f9 100%);
-            height: 100vh;
+            min-height: 100vh; /* Cambiado a min-height para evitar cortes */
             display: flex;
             justify-content: center;
             align-items: center;
             color: var(--texto-suave);
+            padding: 20px; /* Margen de seguridad para que la tarjeta no toque los bordes del cel */
         }
 
         .app-card {
             background: var(--blanco);
-            width: 92%;
+            width: 100%;
             max-width: 480px;
-            padding: 60px 40px;
+            /* Ajuste de padding: Menos arriba para que el título suba pero con aire suficiente */
+            padding: 40px 30px; 
             border-radius: 30px;
             box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
             text-align: center;
-            position: relative;
-            /* Línea superior con el azul de tu menú lateral */
-            border-top: 10px solid var(--azul-corporativo);
+            border-top: 8px solid var(--azul-corporativo);
+            margin: auto; /* Centrado extra */
         }
 
         .header-section {
-            margin-bottom: 45px;
+            margin-bottom: 35px;
+            padding-top: 10px; /* Pequeño respiro interno */
         }
 
         .brand-name {
+            /* Tamaño dinámico: 3.2rem en PC, pero se ajusta abajo para cel */
             font-size: 3.2rem;
             font-weight: 800;
             color: var(--azul-corporativo);
             letter-spacing: -2px;
             margin-bottom: 5px;
+            line-height: 1.1;
         }
 
         .tagline {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--azul-brillante);
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             font-weight: 700;
+            display: block;
         }
 
         .info-section {
             text-align: left;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .info-group {
-            margin-bottom: 25px;
-            padding: 20px;
-            border-radius: 18px;
+            margin-bottom: 20px;
+            padding: 18px;
+            border-radius: 15px;
             background: #f8fafc;
             border: 1px solid #eef2f6;
         }
 
         .info-group h2 {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--azul-corporativo);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 700;
         }
 
         .info-group p {
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 0.92rem;
+            line-height: 1.5;
             color: var(--texto-suave);
         }
 
         .btn-entrar {
             display: block;
-            /* Degradado azul idéntico a los elementos visuales de tu app */
             background: linear-gradient(180deg, var(--azul-brillante) 0%, var(--azul-corporativo) 100%);
             color: white;
             text-decoration: none;
-            padding: 22px;
+            padding: 20px;
             border-radius: 15px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(43, 91, 179, 0.35);
+            box-shadow: 0 10px 25px rgba(43, 91, 179, 0.3);
             text-transform: uppercase;
         }
 
-        .btn-entrar:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(43, 91, 179, 0.5);
-            filter: brightness(1.1);
-        }
+        /* AJUSTES ESPECÍFICOS PARA CELULARES */
+        @media (max-width: 480px) {
+            .brand-name {
+                font-size: 2.4rem; /* Más pequeño para que quepa en una sola línea */
+                margin-top: 10px;
+            }
+            
+            .app-card {
+                padding: 30px 20px; /* Menos padding lateral en cel para ganar espacio */
+            }
 
-        .footer-note {
-            margin-top: 35px;
-            font-size: 0.85rem;
-            color: #94a3b8;
-            font-weight: 600;
+            .tagline {
+                font-size: 0.75rem;
+                letter-spacing: 2px;
+            }
         }
     </style>
 </head>
@@ -131,18 +137,20 @@
         <div class="info-section">
             <div class="info-group">
                 <h2>Socios Conductores</h2>
-                <p>Optimiza tu rentabilidad con <strong>liquidez inmediata</strong>. Toma el mando como gestor independiente con tarifas diseñadas para proteger tu esfuerzo y tu vehículo. Respaldo humano permanente.</p>
+                <p>Optimiza tu rentabilidad con <strong>liquidez inmediata</strong>. Sé tu propio gestor con soporte humano permanente.</p>
             </div>
 
             <div class="info-group">
-                <h2>Experiencia del Pasajero</h2>
-                <p>Tu ciudad disponible al instante. Viaja con estándares superiores de seguridad, eficiencia y transparencia total en cada tarifa.</p>
+                <h2>Pasajeros</h2>
+                <p>Tu ciudad disponible al instante. Seguridad y transparencia total en cada tarifa.</p>
             </div>
         </div>
 
         <a href="https://tinyurl.com/YO-TE-LLEVO" class="btn-entrar">ENTRAR</a>
 
-        <p class="footer-note">Soporte Técnico 24/7 • Tecnología de Vanguardia</p>
+        <p style="margin-top: 25px; font-size: 0.8rem; color: #94a3b8; font-weight: 600;">
+            Soporte 24/7 • Tecnología de Vanguardia
+        </p>
     </div>
 
 </body>
